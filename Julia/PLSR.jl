@@ -27,7 +27,7 @@ function split_data(x, y, m, var)
     
     return (X_cal, Y_cal), (X_val, Y_val), (X_test, Y_test)
 end
-function save_results!(var_name::String, RMSE, R2, RE, RPD)
+function save_results!(var_name::String, RMSE, optimal_nlv, R2, RE, RPD)
     global results_df  
 
     # Ensure the values are scalars
@@ -37,53 +37,54 @@ function save_results!(var_name::String, RMSE, R2, RE, RPD)
     RPD = only(RPD)  # Ensure RPD is a scalar
 
     # Create a new row as a DataFrame
-    new_row = DataFrame(Variable=[var_name], RMSE=[RMSE],  
+    new_row = DataFrame(Variable=[var_name], RMSE=[RMSE], Optimal_NLV=[optimal_nlv], 
                         R2=[R2], RE=[RE], RPD=[RPD])
 
     # Append the new row to results_df
     append!(results_df, new_row)
 end
-results_df = DataFrame(Variable=String[], RMSE=Float64[],  R2=Float64[], RE=Float64[], RPD=Float64[])
+results_df = DataFrame(Variable=String[], RMSE=Float64[], Optimal_NLV=Int[], R2=Float64[], RE=Float64[], RPD=Float64[])
 
 
-# # # # # # #   Variable to use to split the data  # # # # # # # # 
+# # # # # # #   Variable to split data  # # # 
 variables = ["adf", "adl", "cf", "cp", "dmdcell", "ndf"]
 for Var in variables
     (X_cal, Y_cal), (X_val, Y_val), (X_test, Y_test) = split_data(X, Y, M, Var)
-    # Combine calibration and validation sets
+    # size(X_cal)
+    # size(Y_cal)
+    # size(X_val)
+    # size(Y_val)
+
+    # Combine cal and val 
     X_train = vcat(X_cal, X_val)
     Y_train = vcat(Y_cal, Y_val)
 
-    nlvdis = [5; 15; 25] ; metric = [:mah]
-    h = [1; 1.8; 2.5; 3.5; 5] ; k = [150; 300; 500; 600; 750; 1000] 
-    nlv = [0:10, 0:15, 0:20, 5:10, 5:15, 5:20]
-    pars = mpar(nlvdis = nlvdis, metric = metric, h = h, k = k, nlv = nlv)
+    # Define model PLS
+    nlv_range = 0:50
+    model = plskern()
+    res = gridscore(model, X_cal, Y_cal, X_val, Y_val; score = rmsep, pars = nothing, nlv = nlv_range, 
+        verbose = false)
 
-    model = lwplsravg()
-    zres = gridscore(model, X_cal, Y_cal, X_val, Y_val; score = rmsep, pars, verbose = false)
-    u = findall(zres.y1 .== minimum(zres.y1))[1]
-    zres[u, :]   
-    model = lwplsravg(nlvdis = zres.nlvdis[u], metric = zres.metric[u], 
-        h = zres.h[u], k = zres.k[u], nlv = zres.nlv[u], verbose = false)
-    fit!(model, X_train, Y_train)
-    pred = Jchemo.predict(model, X_test).pred
+    u = findall(res.y1 .== minimum(res.y1))[1]
+    res[u, :]
+    mod = plskern(; nlv = res.nlv[u])
+    fit!(mod, X_train, Y_train)
+    pred = Jchemo.predict(mod, X_test).pred
     # @show rmsep(pred, Y_test)
 
     RMSE = only(rmsep(pred, Y_test))  
-    optimal_nlv = zres.nlv[u]  
+    optimal_nlv = res.nlv[u]  
     R2 = only(r2(pred, Y_test))
     RE = RMSE / only(minimum(Y_test))
     RPD = only(rpd(pred, Y_test))
-    save_results!(Var, RMSE, R2, RE, RPD)
 
+    # Plot RMSEP vs. Number of LVs
+    # Plots.plot(res.nlv, res.y1, xlabel="Nb. LVs", ylabel="RMSEP", label="RMSEP", lw=2)
+    # Plots.scatter!([optimal_nlv], [res.y1[u]], label="Optimal", markersize=6, color=:red)
+    # plotxy(vec(pred), Y_test; color = (:red, .5), bisect = true, xlabel = "Prediction",
+    # ylabel = "Observed").f
+
+    save_results!(Var, RMSE, optimal_nlv, R2, RE, RPD)
 end
 
-results_df
-
-CSV.write("results_lwplsr-avg.csv", results_df)
-
-
-
-
-
-
+CSV.write("results_plsr.csv", results_df)

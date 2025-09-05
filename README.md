@@ -7,9 +7,9 @@ The project evaluates and compares the performance of several deep learning arch
 
 ## Repository Structure
 
-**/Rapport** - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) and the presentation used in the defence of the thesis.
+- [x] **/Report** - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) and the presentation (Présentation_soutenance_DSSAM_Abdelali.pptx) used in the defence of the thesis.
 
-/python/ - Includes the Python code and Jupyter Notebooks for the deep learning models (1D-CNN, IPA, 1D-CAE).
+- [x] /python/ - Includes the Python code and Jupyter Notebooks for the deep learning models (1D-CNN, IPA, 1D-CAE).
 
 /Julia/ - Contains the Julia code for the chemometric models (PLS and kNN-LWPLSR) implemented using the Jchemo library.
 

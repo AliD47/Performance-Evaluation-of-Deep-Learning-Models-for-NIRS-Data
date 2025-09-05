@@ -121,7 +121,7 @@ Y = pd.read_csv(";;; Y.csv", sep=';')
 M = pd.read_csv(";;; M.csv", sep=';', na_values ='missing')
 
 # Importer le modèle IPA (fichier: IPA_architecture.py)
-from IPA_architecture import IPA
+from Modèle_IPA_architeture import IPA
 Modd = "IPA"
 
 # Boucle sur chaque variable cible dans le fichier Y
@@ -234,4 +234,5 @@ for Var in Y.columns:
         updated_results = new_row
     
     # Sauvegarde les résultats dans le fichier CSV
+
     updated_results.to_csv(csv_path, index=False, sep=',')

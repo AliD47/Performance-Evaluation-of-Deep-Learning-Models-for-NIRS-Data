@@ -5,9 +5,9 @@ This repository contains the code, report, and results for the final year engine
 
 The project evaluates and compares the performance of several deep learning architectures against advanced chemometric methods for predicting six key chemical components in forage samples using a private dataset from CIRAD-Selmet.
 
-Repository Structure
+## Repository Structure
 
-    /Rapport/ - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) which details the methodology, results, and conclusions of the study.
+*/Rapport/* - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) which details the methodology, results, and conclusions of the study.
 
 /python/ - Includes the Python code and Jupyter Notebooks for the deep learning models (1D-CNN, IPA, 1D-CAE).
 

@@ -7,7 +7,7 @@ The project evaluates and compares the performance of several deep learning arch
 
 ## Repository Structure
 
-*/Rapport/* - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) which details the methodology, results, and conclusions of the study.
+**/Rapport** - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) and the presentation used in the defence of the thesis.
 
 /python/ - Includes the Python code and Jupyter Notebooks for the deep learning models (1D-CNN, IPA, 1D-CAE).
 

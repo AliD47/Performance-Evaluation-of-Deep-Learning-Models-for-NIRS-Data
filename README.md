@@ -2,11 +2,11 @@
 
 <p align="center">
   <a href="https://iav.ac.ma/">
-    <img src="./assets/logo_iav2.png" width="300" alt="IAV - Hassan II Agronomic and Veterinary Institute" />
+    <img src="./assets/logo_iav2.png" width="400" alt="IAV - Hassan II Agronomic and Veterinary Institute" />
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://umr-selmet.cirad.fr/">
-    <img src="./assets/logo-cirad.jpg" width="140" alt="CIRAD-Selmet" />
+    <img src="./assets/logo-cirad.jpg" width="170" alt="CIRAD-Selmet" />
   </a>
 </p>
 

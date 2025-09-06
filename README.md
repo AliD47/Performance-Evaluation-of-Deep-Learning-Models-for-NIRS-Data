@@ -9,9 +9,9 @@ The project evaluates and compares the performance of several deep learning arch
 
 - **/Report** - Contains the final thesis report (Rapport_PFE_DSSAM_Abdelali.pdf) and the presentation (Présentation_soutenance_DSSAM_Abdelali.pptx) used in the defence of the thesis.
 
-- **/python** : Includes the Python code for optimizing the models used, with the  [`requirements.txt`](.python/requirements.txt)
+- **/python** : Includes the Python code for optimizing the models used, with the  [`requirements.txt`](.python/requirements.txt) for the libraries required.
 
-- **/Julia** : Contains the Julia code for the chemometric models (PLS and kNN-LWPLSR) implemented using the Jchemo library.
+- **/Julia** : Contains the Julia code for the chemometric models (PLS and kNN-LWPLSR) implemented using the [JChemo](https://github.com/mlesnoff/Jchemo.jl) library.
 
 - **/resultats** : Stores the final results, figures, and performance comparisons generated during the study.
 

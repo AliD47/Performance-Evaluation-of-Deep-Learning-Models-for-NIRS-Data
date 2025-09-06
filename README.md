@@ -15,8 +15,12 @@ The project evaluates and compares the performance of several deep learning arch
 
 - **/resultats** : Stores the final results, figures, and performance comparisons generated during the study.
 
+## Methodology
+The study conducts a comparative analysis between a benchmark local non-linear chemometric model, kNN-LWPLSR, and three distinct Deep Learning strategies:
 
+- [1D-CNN](https://doi.org/10.1016/j.chemolab.2023.105023): A direct supervised convolutional approach for feature extraction.
 
+- [IPA](https://doi.org/10.1016/j.fuel.2024.133016): A more complex, multi-scale architecture inspired by the Inception model.
 
-requirements.txt - The list of Python dependencies required to run the deep learning code.
+- [1D-CAE](https://doi.org/10.7717/peerj-cs.1266): An unsupervised feature extraction approach using a 1D Convolutional Autoencoder, followed by a regression.
 

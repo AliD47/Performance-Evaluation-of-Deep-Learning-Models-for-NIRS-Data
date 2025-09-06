@@ -1,7 +1,17 @@
 # Thesis : Evaluation of deep learning model performance to predict the chemical composition of forage from near-infrared spectroscopy data.
 
-[![IAV](./assets/logo_iav2.png)](https://iav.ac.ma/)
-[![CIRAD](./assets/logo-cirad.jpg)]([https://iav.ac.ma/](https://umr-selmet.cirad.fr/))
+<p align="center">
+  <a href="https://iav.ac.ma/">
+    <img src="./assets/logo_iav2.png" width="140" alt="IAV - Hassan II Agronomic and Veterinary Institute" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://umr-selmet.cirad.fr/">
+    <img src="./assets/logo-cirad.jpg" width="140" alt="CIRAD-Selmet" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/logo_iav2.png" width="140" alt="Hassan II" />
+</p>
+
 
 
 This repository contains the code, report, and results for the Final Year Project, in order to obtain my state Agricultural Engineering degree with a specialization in Data Science in Agriculture at the [Hassan II Agronomic and Veterinary Institute](https://iav.ac.ma/), titled: 

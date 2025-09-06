@@ -11,7 +11,7 @@ The project evaluates and compares the performance of several deep learning arch
 
 - **/python** : Includes the Python code for optimizing the models used, with the  [`requirements.txt`](.python/requirements.txt) for the libraries required.
 
-- **/Julia** : Contains the Julia code for the chemometric models (PLS and kNN-LWPLSR) implemented using the [JChemo](https://github.com/mlesnoff/Jchemo.jl) library, as well as the [`Project.toml`](Julia/Project.toml)
+- **/Julia** : Contains the Julia code for the chemometric models (PLS and kNN-LWPLSR) implemented using the [JChemo](https://github.com/mlesnoff/Jchemo.jl) library, as well as the [`Project.toml`](Julia/Project.toml).
 
 - **/results** : Stores the final results, figures, and performance comparisons generated during the study.
 

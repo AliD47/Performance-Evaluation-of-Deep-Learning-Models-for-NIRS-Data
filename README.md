@@ -1,9 +1,9 @@
 # Thesis : Evaluation of deep learning model performance to predict the chemical composition of forage from near-infrared spectroscopy data.
 
-This repository contains the code, report, and results for the final year engineering thesis titled: 
+This repository contains the code, report, and results for the Final Year Project, in order to obtain my state Agricultural Engineering degree with a specialization in Data Science in Agriculture at the [Hassan II Agronomic and Veterinary Institute](https://iav.ac.ma/), titled: 
 "Évaluation des performances de modèles d'apprentissage profond pour prédire la composition chimique de fourrage à partir de données de spectroscopie en proche infrarouge"
 
-The project evaluates and compares the performance of several deep learning architectures against advanced chemometric methods for predicting six key chemical components in forage samples using a private dataset from CIRAD-Selmet.
+The project evaluates and compares the performance of several deep learning architectures against advanced chemometric methods for predicting six key chemical components in forage samples using a private dataset from [CIRAD-Selmet](https://umr-selmet.cirad.fr/).
 
 ## Repository Structure
 
@@ -24,3 +24,6 @@ The study conducts a comparative analysis between a benchmark local non-linear c
 
 - [1D-CAE](https://doi.org/10.7717/peerj-cs.1266) : An unsupervised feature extraction approach using a 1D Convolutional Autoencoder, followed by a regression.
 
+___
+# Author
+DSSAM Abdelali

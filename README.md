@@ -8,8 +8,6 @@
   <a href="https://umr-selmet.cirad.fr/">
     <img src="./assets/logo-cirad.jpg" width="140" alt="CIRAD-Selmet" />
   </a>
-  &nbsp;&nbsp;&nbsp;
-  <img src="./assets/logo_iav2.png" width="140" alt="Hassan II" />
 </p>
 
 

@@ -40,6 +40,7 @@ The study conducts a comparative analysis between a benchmark local non-linear c
 ___
 # Author
 [DSSAM Abdelali](https://github.com/AliD47)
+
 Under the supervision of :
 - [BENSIALI Saloua](https://www.researchgate.net/profile/Saloua-Bensiali)
 - [LESNOFF Matthieu](https://github.com/mlesnoff)

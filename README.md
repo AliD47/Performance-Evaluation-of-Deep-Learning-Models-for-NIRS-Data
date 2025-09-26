@@ -20,7 +20,7 @@ The project evaluates and compares the performance of several deep learning arch
 
 ## Repository Structure
 
-- **/Report** - Contains the final thesis report [`Rapport_PFE_DSSAM_Abdelali.pdf`](Report/Rapport_PFE_DSSAM_Abdelali.pdf) and the presentation [Présentation_soutenance_DSSAM_Abdelali.pptx](Report/Présentation_soutenance_DSSAM_Abdelali.pptx) used in the defence of the thesis.
+- **/Report** - Contains the final thesis [Rapport](Report/Rapport_PFE_DSSAM_Abdelali.pdf) and the [presentation](Report/Présentation_soutenance_DSSAM_Abdelali.pptx) used in the defence of the thesis.
 
 - **/python** : Includes the Python code for optimizing the models used, with the  [`requirements.txt`](python/requirements.txt) for the libraries required.
 

@@ -42,5 +42,5 @@ ___
 [DSSAM Abdelali](https://github.com/AliD47)
 
 Under the supervision of :
-- [BENSIALI Saloua](https://www.researchgate.net/profile/Saloua-Bensiali)
+- [BENSIALI Saloua](https://github.com/sbensiali)
 - [LESNOFF Matthieu](https://github.com/mlesnoff)
